@@ -551,7 +551,7 @@ body._lock-scroll {
 }
 
 .header._scroll .header__wrapper {
-  background-color: rgba(27, 27, 48, 0.9);
+  background-color: rgba(27, 27, 48, 0.95);
 }
 .header._scroll .header__body {
   /* Если меньше контейнера */
@@ -1212,7 +1212,7 @@ body._lock-scroll {
     top: 0;
     left: 0;
     z-index: -1;
-    filter: blur(45px);
+    filter: blur(20px);
     background-color: #0E0E2C;
   }
 }
@@ -1331,6 +1331,8 @@ body._lock-scroll {
 }
 .main-block-right__progress {
   /* Если меньше контейнера */
+  max-width: 200px;
+  /* Если меньше контейнера */
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -1344,6 +1346,11 @@ body._lock-scroll {
   box-shadow: -12px 13px 30px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   text-align: center;
+}
+@media (max-width: 1210px) {
+  .main-block-right__progress {
+    max-width: calc(115px + 85 * ((100vw - 320px) / 890));
+  }
 }
 @media (max-width: 1210px) {
   .main-block-right__progress {
@@ -1437,14 +1444,14 @@ body._lock-scroll {
 @media (max-width: 992.2px) {
   .main-block-right__watch {
     /* Если меньше контейнера */
-    left: -100px;
+    left: -140px;
     /* Если меньше контейнера */
     bottom: 250px;
   }
 }
 @media (max-width: 992.2px) and (max-width: 1210px) {
   .main-block-right__watch {
-    left: calc(20px + -120 * ((100vw - 320px) / 890));
+    left: calc(20px + -160 * ((100vw - 320px) / 890));
   }
 }
 @media (max-width: 992.2px) and (max-width: 1210px) {
@@ -1464,9 +1471,7 @@ body._lock-scroll {
   }
 }
 .main-block-right-e__item {
-  /* Если меньше контейнера */
   max-width: 550px;
-  /* Если меньше контейнера */
   max-height: 650px;
   width: 100%;
   height: 100%;
@@ -1475,14 +1480,12 @@ body._lock-scroll {
   left: 50%;
   border-radius: 12px;
 }
-@media (max-width: 1210px) {
+@media (max-width: 1920.2px) {
   .main-block-right-e__item {
-    max-width: calc(200px + 350 * ((100vw - 320px) / 890));
-  }
-}
-@media (max-width: 1210px) {
-  .main-block-right-e__item {
-    max-height: calc(300px + 350 * ((100vw - 320px) / 890));
+    /* Всегда */
+    max-width: calc(200px + 350 * ((100vw - 320px) / 1600));
+    /* Всегда */
+    max-height: calc(300px + 350 * ((100vw - 320px) / 1600));
   }
 }
 .main-block-right-e__item_01 {
@@ -1559,6 +1562,7 @@ body._lock-scroll {
 }
 
 .main-block-watch__image {
+  margin-right: 35px;
   position: relative;
 }
 .main-block-watch__image img {
@@ -1738,7 +1742,7 @@ body._lock-scroll {
     width: 14px;
     height: 14px;
     /* Всегда */
-    bottom: calc(20px + 80 * ((100vw - 320px) / 1600));
+    bottom: calc(-50px + 150 * ((100vw - 320px) / 1600));
     /* Если меньше контейнера */
     right: 110px;
     transform: rotate(35deg);
@@ -1753,7 +1757,7 @@ body._lock-scroll {
 @media (min-width: 1920.2px) {
   .main-block-e__item_03 {
     top: 20px;
-    right: 700px;
+    right: 900px;
     transform: rotate(-35deg);
     border: 17px solid transparent;
     border-bottom: 30px solid #FF006E;
@@ -1761,8 +1765,8 @@ body._lock-scroll {
 }
 @media (max-width: 1920.2px) {
   .main-block-e__item_03 {
-    /* Если меньше контейнера */
-    top: 20px;
+    /* Всегда */
+    top: calc(-80px + 60 * ((100vw - 320px) / 1600));
     /* Всегда */
     right: calc(30px + 870 * ((100vw - 320px) / 1600));
     transform: rotate(-35deg);
@@ -1770,13 +1774,10 @@ body._lock-scroll {
     border-bottom: 30px solid #FF006E;
   }
 }
-@media (max-width: 1920.2px) and (max-width: 1210px) {
-  .main-block-e__item_03 {
-    top: calc(100px + -80 * ((100vw - 320px) / 890));
-  }
-}
 @media (max-width: 992.2px) {
   .main-block-e__item_03 {
+    /* Всегда */
+    top: calc(60px + -60 * ((100vw - 320px) / 1600));
     border: 14px solid transparent;
     border-bottom: 25px solid #FF006E;
   }
