@@ -272,10 +272,15 @@ function actionsHeader() {
 			document.addEventListener("click", function (e) {
 				const elementTarget = e.target;
 
-				if (elementTarget === menuClose || elementTarget === document.querySelector(".header-menu__wrapper")) {
+				if (
+					elementTarget === menuClose ||
+					elementTarget === document.querySelector(".header-menu__wrapper") ||
+					elementTarget.closest(".header-menu__list-link")
+				) {
 					menuBody.classList.remove("_active");
 					document.body.classList.remove("_lock-scroll");
 				}
+
 			});
 		}
 	}
