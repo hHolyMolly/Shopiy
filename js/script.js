@@ -1,5 +1,5 @@
 //< " ПОДКЛЮЧЕНИЕ JS КОМПОНЕНТОВ " >=============================================================================================================>//
-/* function dynamicAdaptive() {
+function dynamicAdaptive() {
 	function DynamicAdapt(type) {
 		this.type = type;
 	}
@@ -142,7 +142,7 @@
 	da.init();
 
 }
-dynamicAdaptive(); // ДИНАМИЧЕСКИЙ АДАПТИВ */
+dynamicAdaptive(); // ДИНАМИЧЕСКИЙ АДАПТИВ
 
 function scrollHeader() {
 	const header = document.querySelector('.header');
@@ -160,7 +160,7 @@ function scrollHeader() {
 }
 scrollHeader(); // ДОБАВЛЕНИЕ ХЕДЕРУ КЛАСС ПРИ СКРОЛЛЕ
 
-/* const myPopup = function () {
+const myPopup = function () {
 	const openBtns = document.querySelectorAll(".popup-open");
 	const wrappers = document.querySelectorAll(".popup-item");
 	let popupData;
@@ -209,9 +209,14 @@ scrollHeader(); // ДОБАВЛЕНИЕ ХЕДЕРУ КЛАСС ПРИ СКРО�
 		closePopup()
 	}
 }
-myPopup(); // ПОПАПЫ */
+myPopup(); // ПОПАПЫ
 
 //< " СКРИПТЫ " >=============================================================================================================>//
+
+new WOW({
+	mobile: false,
+	offset: 300,
+}).init();
 
 let isMobile = {
 	Android: function () { return navigator.userAgent.match(/Android/i); },
