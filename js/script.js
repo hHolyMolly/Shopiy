@@ -293,3 +293,25 @@ function actionsHeader() {
 
 }
 actionsHeader()
+
+function showPassord() {
+	const passwordItems = document.querySelectorAll(".popup-field__item");
+
+	passwordItems.forEach(item => {
+		item.addEventListener("click", function (e) {
+			const elementTarget = e.target;
+
+
+			if (elementTarget.closest(".popup-field__password-show")) {
+				if (elementTarget.closest(".popup-field__password .popup-field__item").querySelector(".popup-field__input").getAttribute("type") === ("password")) {
+					elementTarget.closest(".popup-field__password .popup-field__item").querySelector(".popup-field__input").setAttribute("type", "text");
+					elementTarget.closest(".popup-field__password .popup-field__item").querySelector(".popup-field__password-show").classList.add("_active");
+				} else {
+					elementTarget.closest(".popup-field__password .popup-field__item").querySelector(".popup-field__input").setAttribute("type", "password");
+					elementTarget.closest(".popup-field__password .popup-field__item").querySelector(".popup-field__password-show").classList.remove("_active");
+				}
+			}
+		});
+	});
+}
+showPassord()
