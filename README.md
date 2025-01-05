@@ -1,16 +1,4 @@
-# Shopiy
-Landing page, резиновая вёрстка сайта с анимацией при скролле
+![Preview](https://github.com/hHolyMolly/Shopiy/blob/main/img/Preview.png)
 
-### Используемые технологии:
-
-- HTML/CSS;
-- JS;
-- Слайдер - Swiper;
-- Parallax;
-- Резиновый адаптив;
-- Препроцессор SCSS;
-- Бэм;
-- Иконочный шрифт;
-- Анимация при скролле;
-- Flexbox, Grid;
-- Pixel Perfect.
+# Description:
+An interactive project with animations and parallax effects, featuring a modern and stylish design. The standout feature is the parallax effect on the main block, adding depth and interactivity. Fully responsive and optimized with a custom Gulp build for fast loading. Key features include smooth scroll animations, Swiper sliders, responsive design, and Pixel Perfect layout. Built with BEM, SCSS, and modern tools for scalability and ease of maintenance.
