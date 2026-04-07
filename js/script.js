@@ -42,7 +42,7 @@ function dynamicAdaptive() {
 			const оbjectsFilter = Array.prototype.filter.call(this.оbjects, function (item) {
 				return item.breakpoint === mediaBreakpoint;
 			});
-			matchMedia.addListener(function () {
+			matchMedia.addEventListener('change', function () {
 				_this.mediaHandler(matchMedia, оbjectsFilter);
 			});
 			this.mediaHandler(matchMedia, оbjectsFilter);
@@ -233,26 +233,28 @@ if (isMobile.any()) {
 	document.body.classList.add("_pc");
 
 	function parallax() {
+		let ticking = false;
 		document.addEventListener("mousemove", function (e) {
-			this.querySelectorAll(".parallax-mouse").forEach(item => {
-				const animationDuration = 2000;
+			if (!ticking) {
+				requestAnimationFrame(function () {
+					document.querySelectorAll(".parallax-mouse").forEach(item => {
+						const animationDuration = 2000;
 
-				const parallaxSpeed = item.getAttribute("data-parallax-speed");
-				item.style.transform = `
-					translateX(${e.clientX * parallaxSpeed / animationDuration}px) 
-					translateY(${e.clientY * parallaxSpeed / animationDuration}px)
-					`;
+						const parallaxSpeed = item.getAttribute("data-parallax-speed");
+						const transformRotate = item.getAttribute("data-parallax-rotate");
+						const translateX = e.clientX * parallaxSpeed / animationDuration;
+						const translateY = e.clientY * parallaxSpeed / animationDuration;
 
-				const transformRotate = item.getAttribute("data-parallax-rotate")
-
-				if (transformRotate) {
-					item.style.transform = `
-					rotate(${transformRotate}deg)
-					translateX(${e.clientX * parallaxSpeed / animationDuration}px) 
-					translateY(${e.clientY * parallaxSpeed / animationDuration}px)
-					`;
-				}
-			});
+						if (transformRotate) {
+							item.style.transform = `rotate(${transformRotate}deg) translateX(${translateX}px) translateY(${translateY}px)`;
+						} else {
+							item.style.transform = `translateX(${translateX}px) translateY(${translateY}px)`;
+						}
+					});
+					ticking = false;
+				});
+				ticking = true;
+			}
 		});
 	}
 	parallax()

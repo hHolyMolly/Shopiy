@@ -4,10 +4,11 @@
 <head>
    <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Power up your Shopify products. More than 90,000+ companies trust our business. Get help from a dedicated Shopify developer today.">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print" onload="this.media='all'" />
 <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -190,7 +191,7 @@
                <div class="_container">
                   <div class="services__body">
                      <div class="services__image wow animate__animated animate__fadeIn" data-wow-duration="1.5s">
-                        <img src="img/page/services/image.png" alt="services-image">
+                        <img src="img/page/services/image.png" alt="Services dashboard" loading="lazy">
                      </div>
                      <div class="services__content">
                         <div class="services__label label wow animate__animated animate__fadeInUp"
@@ -240,7 +241,7 @@
                         <article class="what-items__card what-items__card_yellow wow animate__animated animate__fadeIn"
                            data-wow-duration="1.5s" data-wow-delay="0.1s">
                            <div class="what-items__image">
-                              <img src="img/page/what/01.png" alt="what-01">
+                              <img src="img/page/what/01.png" alt="Grow your traffic" loading="lazy">
                            </div>
                            <h3 class="what-items__title">
                               Grow your traffic
@@ -252,7 +253,7 @@
                         <article class="what-items__card what-items__card_blue wow animate__animated animate__fadeIn"
                            data-wow-duration="1.5s" data-wow-delay="0.3s">
                            <div class="what-items__image">
-                              <img src="img/page/what/02.png" alt="what-02">
+                              <img src="img/page/what/02.png" alt="Scale your business" loading="lazy">
                            </div>
                            <h3 class="what-items__title">
                               Grow your traffic
@@ -264,7 +265,7 @@
                         <article class="what-items__card what-items__card_pink wow animate__animated animate__fadeIn"
                            data-wow-duration="1.5s" data-wow-delay="0.1s">
                            <div class="what-items__image">
-                              <img src="img/page/what/03.png" alt="what-03">
+                              <img src="img/page/what/03.png" alt="Increase conversions" loading="lazy">
                            </div>
                            <h3 class="what-items__title">
                               Grow your traffic
@@ -276,7 +277,7 @@
                         <article class="what-items__card what-items__card_orange wow animate__animated animate__fadeIn"
                            data-wow-duration="1.5s" data-wow-delay="0.3s">
                            <div class="what-items__image">
-                              <img src="img/page/what/04.png" alt="what-04">
+                              <img src="img/page/what/04.png" alt="Boost revenue" loading="lazy">
                            </div>
                            <h3 class="what-items__title">
                               Grow your traffic
@@ -294,7 +295,7 @@
                   <div class="stories__body">
                      <div class="stories__image-block stories-image" data-da=".stories-inner,768.2,2">
                         <img class="wow animate__animated animate__fadeIn" data-wow-delay="0.3s"
-                           src="img/page/stories/image.png" alt="stories-image">
+                           src="img/page/stories/image.png" alt="Product stories illustration" loading="lazy">
                         <div class="stories-image__element wow animate__animated animate__fadeIn">
                         </div>
                         <div class="stories-image__sales wow animate__animated animate__fadeIn" data-wow-offset="150">
@@ -369,7 +370,7 @@
                      </div>
                      <div class="process__image-block process-image">
                         <img class="wow animate__animated animate__fadeIn" data-wow-delay="0.3s"
-                           src="img/page/process/image.png" alt="process-image">
+                           src="img/page/process/image.png" alt="Creative process" loading="lazy">
                         <div class="process-image__element wow animate__animated animate__fadeIn" data-wow-offset="150">
                         </div>
                         <div class="process-image__clients process-image-clients wow animate__animated animate__fadeIn"
@@ -445,16 +446,16 @@
             </ul>
          </nav>
          <div class="footer__links footer-links">
-            <a class="footer-links__icon _icon-facebook" href="#"></a>
-            <a class="footer-links__icon _icon-twitter" href="#"></a>
-            <a class="footer-links__icon _icon-insta" href="#"></a>
-            <a class="footer-links__icon _icon-linkedin" href="#"></a>
+            <a class="footer-links__icon _icon-facebook" href="#" aria-label="Facebook"></a>
+            <a class="footer-links__icon _icon-twitter" href="#" aria-label="Twitter"></a>
+            <a class="footer-links__icon _icon-insta" href="#" aria-label="Instagram"></a>
+            <a class="footer-links__icon _icon-linkedin" href="#" aria-label="LinkedIn"></a>
          </div>
       </div>
    </div>
 </footer>
       <div class="popup-wrapper">
-	<div class="popup-wrapper__item popup-item login-popup">
+	<div class="popup-wrapper__item popup-item login-popup" role="dialog" aria-modal="true" aria-label="Sign in">
 		<div class="popup-item__body">
 			<div class="popup-item__top">
 				<div class="popup-item__title">
@@ -504,8 +505,8 @@
 	</div>
 </div> -->
    </div>
-   <script src="js/wow.min.js"></script>
-   <script src="js/script.js"></script>
+   <script src="js/wow.min.js" defer></script>
+   <script src="js/script.js" defer></script>
 </body>
 
 </html>
